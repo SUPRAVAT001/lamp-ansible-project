@@ -1,15 +1,4 @@
-lamp-ansible-project/
-├── inventory
-├── lamp-setup.yml
-├── Jenkinsfile
-├── roles/
-│   ├── apache/
-│   │   └── tasks/main.yml
-│   ├── mysql/
-│   │   └── tasks/main.yml
-│   └── php/
-│       └── tasks/main.yml
-└── report.md
+
 
 # inventory
 localhost ansible_connection=local
