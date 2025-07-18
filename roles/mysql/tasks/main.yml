@@ -1,0 +1,15 @@
+---
+# tasks file for mysql
+#
+- name: Install MariaDB Server
+  apt:
+    name: mariadb-server
+    state: present
+    update_cache: yes
+
+- name: Ensure MariaDB is running
+  service:
+    name: mysql
+    state: started
+    enabled: true
+
