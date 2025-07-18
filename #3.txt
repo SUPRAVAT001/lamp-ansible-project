@@ -1,0 +1,45 @@
+Started by user supravat dash
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/lamp-ansible-job
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/lamp-ansible-job/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/SUPRAVAT001/lamp-ansible-project # timeout=10
+Fetching upstream changes from https://github.com/SUPRAVAT001/lamp-ansible-project
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/SUPRAVAT001/lamp-ansible-project +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision a20c685a705d1a7a0c11c483740ba9d6679d1a6a (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a20c685a705d1a7a0c11c483740ba9d6679d1a6a # timeout=10
+Commit message: "Initial commit: LAMP automation with Ansible roles"
+ > git rev-list --no-walk a20c685a705d1a7a0c11c483740ba9d6679d1a6a # timeout=10
+[lamp-ansible-job] $ /bin/sh -xe /tmp/jenkins6463194939054207179.sh
++ ansible-playbook -i inventory lamp-setup.yml
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [apache : Install Apache] *************************************************
+ok: [localhost]
+
+TASK [apache : Ensure Apache is running] ***************************************
+ok: [localhost]
+
+TASK [mysql : Install MariaDB Server] ******************************************
+ok: [localhost]
+
+TASK [mysql : Ensure MariaDB is running] ***************************************
+ok: [localhost]
+
+TASK [php : Install PHP and required modules] **********************************
+ok: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=6    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS
